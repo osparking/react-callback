@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <h1>계수기</h1>
+      <button onClick={addCounter}>계수기 추가</button>
     </>
   )
 }
