@@ -70,7 +70,13 @@ function App() {
           </label>
         </div>        
       </form>
-
+      <div className='form-data'>
+        <h3>폼 자료</h3>
+        <p><strong>텍스트: </strong>{formData.text || "없음"}</p>
+        <p><strong>첵크상자: </strong>{formData.checkbox ? "첵크" : "해제"}</p>
+        <p><strong>라디오: </strong>{formData.radio || "없음"}</p>
+        <p><strong>선택: </strong>{formData.select || "없음"}</p>
+      </div>
     </div>
   )
 }
