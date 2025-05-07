@@ -5,10 +5,14 @@ function App() {
   const [sheepCount, setsheepCount] = useState(0);
   const [step, setStep] = useState(1);
   const incSheepCount = () => {
-    setsheepCount(sheepCount + step)
+    setsheepCount(sheepCount + step);
+  }
+  const incSheepByTwo = () => {
+    setsheepCount(sheepCount + step);
+    setsheepCount(sheepCount + step);
   }
   const decSheepCount = () => {
-    setsheepCount(sheepCount - step)
+    setsheepCount(sheepCount - step);
   }
   const changeStep = (e) => {
     setStep(parseInt(e.target.value));
@@ -23,6 +27,7 @@ function App() {
         onChange={changeStep} />
       <h2><button onClick={incSheepCount}>증가</button></h2>
       <h2><button onClick={decSheepCount}>감소</button></h2>
+      <h2><button onClick={incSheepByTwo}>+2</button></h2>
     </>
   )
 }
