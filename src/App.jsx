@@ -10,7 +10,18 @@ function App() {
   return (
     <>
       <h1>계수기</h1>
-      <button onClick={addCounter}>계수기 추가</button>
+<button className="button ms-3" onClick={addCounter}>계수기 추가</button>
+<ul>
+  {counters.map(counter => {
+    // counter <id> : <value> <button>
+    return (
+      <li key={counter.id}>
+        counter {counter.id} : {counter.value}
+        <button className='button ms-3' onClick={() => { }}>증가</button>
+      </li>
+    );
+  })}
+</ul>
     </>
   )
 }
