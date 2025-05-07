@@ -3,6 +3,9 @@ import './App.css';
 
 function App() {
   const [counters, setCounters] = useState([{ id: 1, value: 0 }]);
+  const addCounter = () => {
+    setCounters([...counters, { id: counters.length + 1, value: 0 }]);
+  }
 
   return (
     <>
