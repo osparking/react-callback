@@ -8,8 +8,8 @@ function App() {
     setsheepCount(sheepCount + step);
   }
   const incSheepByTwo = () => {
-    setsheepCount(sheepCount + step);
-    setsheepCount(sheepCount + step);
+    setsheepCount(s => s + step);
+    setsheepCount(s => s + step);
   }
   const decSheepCount = () => {
     setsheepCount(sheepCount - step);
