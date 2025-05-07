@@ -8,9 +8,16 @@ function App() {
   }
 
   const incCount = (id) => {
-    setCounters(counters.map(c =>
-      c.id === id ? {...c, value: c.value + 1} : c
-    ));
+    // setCounters(counters.map(c =>
+    //   c.id === id ? {...c, value: c.value + 1} : c
+    // ));
+    const updatedCounters = counters.map(c => {
+      if (c.id === id) {
+        return {...c, value: c.value + 1}
+      } 
+      return c;
+    });
+    setCounters(updatedCounters);
   }
 
   return (
