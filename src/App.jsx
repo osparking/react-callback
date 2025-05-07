@@ -55,7 +55,20 @@ function App() {
             </input>옵션 2
           </label>
         </div>
-       
+
+        {/* 내려펼침 */}
+        <div className='form-field'>
+          <label>선택 : 
+            <select name="select"
+              value={formData.select}
+              onChange={handleChange}>
+              <option value=""> -- 하나 선택 -- </option>
+              <option value="option1">옵션 1</option>
+              <option value="option2">옵션 2</option>
+              <option value="option3">옵션 3</option>
+            </select>
+          </label>
+        </div>        
       </form>
 
     </div>
