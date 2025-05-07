@@ -36,6 +36,17 @@ function App() {
             : 첵크상자
           </label>
         </div>
+
+        {/* 라디오 상자 */}
+        <div className='form-field'>
+          <label>라디오 상자</label>
+          <input type="radio" name="radio"
+            value="option1"
+            checked={formData.radio === "option1"}
+            onChange={handleChange}>
+          </input>
+        </div>
+
       </form>
     </div>
   )
