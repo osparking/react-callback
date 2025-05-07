@@ -1,43 +1,17 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [counters, setCounters] = useState([{ id: 1, value: 0 }]);
-  const addCounter = () => {
-    setCounters([...counters, { id: counters.length + 1, value: 0 }]);
-  }
-
-  const incCount = (id) => {
-    // setCounters(counters.map(c =>
-    //   c.id === id ? {...c, value: c.value + 1} : c
-    // ));
-    const updatedCounters = counters.map(c => {
-      if (c.id === id) {
-        return {...c, value: c.value + 1}
-      } 
-      return c;
-    });
-    setCounters(updatedCounters);
-  }
-
+  const [formData, setFormData] = useState({
+    text: "",
+    checkbox: false,
+    radio: "",
+    select: ""
+  })
   return (
-    <>
-      <h1>계수기</h1>
-      <button className="button ms-3" onClick={addCounter}>계수기 추가</button>
-      <ul>
-        {counters.map(counter => {
-          // counter <id> : <value> <button>
-          return (
-            <li key={counter.id}>
-              counter {counter.id} : {counter.value}
-              <button className='button ms-3' 
-                      onClick={() => {incCount(counter.id) }}>
-                증가</button>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <div>
+      <h1>좋은 날!</h1>
+    </div>
   )
 }
 
