@@ -37,17 +37,27 @@ function App() {
           </label>
         </div>
 
-        {/* 라디오 상자 */}
+        {/* 라디오 상자 옵션 1, 2*/}
         <div className='form-field'>
-          <label>라디오 상자</label>
-          <input type="radio" name="radio"
-            value="option1"
-            checked={formData.radio === "option1"}
-            onChange={handleChange}>
-          </input>
+          <label>라디오 상자 :</label>
+          <label>
+            <input type="radio" name="radio"
+              value="option1"
+              checked={formData.radio === "option1"}
+              onChange={handleChange}>
+            </input>옵션 1
+          </label>
+          <label>
+            <input type="radio" name="radio"
+              value="option2"
+              checked={formData.radio === "option2"}
+              onChange={handleChange}>
+            </input>옵션 2
+          </label>
         </div>
-
+       
       </form>
+
     </div>
   )
 }
