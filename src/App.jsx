@@ -9,8 +9,12 @@ function App() {
     select: ""
   })
   return (
-    <div>
-      <h1>좋은 날!</h1>
+    <div className='form-container'>
+      <h1>폼 자료</h1>
+      <form>
+        {/* 텍스트 입력 */}
+        {/* 첵크 상자 */}
+      </form>
     </div>
   )
 }
