@@ -2,25 +2,11 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [sheepCount, setsheepCount] = useState(0);
-  const [step, setStep] = useState(1);
-  const incSheepCount = () => {
-    setsheepCount(sheepCount + step);
-  }
-  const incSheepByTwo = () => {
-    setsheepCount(10);
-    setsheepCount(s => s + step);
-  }
-  const decSheepCount = () => {
-    setsheepCount(sheepCount - step);
-  }
-  const changeStep = (e) => {
-    setStep(parseInt(e.target.value));
-  }
+  const [counters, setCounters] = useState([{ id: 1, value: 0 }]);
 
   return (
     <>
-      <h1>안녕?</h1>
+      <h1>계수기</h1>
     </>
   )
 }
