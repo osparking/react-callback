@@ -10,7 +10,7 @@ function App() {
   })
 
   const handleChange = (e) => {
-    setFormData({ ...formData, text: e.target.value });
+    const {name, value, type, checked} = e.target;
   }
 
   return (
