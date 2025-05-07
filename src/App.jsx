@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
+const handleChange = (e) => {
+}
+
 function App() {
   const [formData, setFormData] = useState({
     text: "",
@@ -13,6 +16,13 @@ function App() {
       <h1>폼 자료</h1>
       <form>
         {/* 텍스트 입력 */}
+        <div className='form-field'>
+          <label>텍스트:</label>
+          <input type="text" name="text"
+            value={formData.text}
+            onChange={handleChange}>
+          </input>
+        </div>
         {/* 첵크 상자 */}
       </form>
     </div>
