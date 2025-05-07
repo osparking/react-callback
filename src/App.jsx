@@ -7,6 +7,12 @@ function App() {
     setCounters([...counters, { id: counters.length + 1, value: 0 }]);
   }
 
+  const incCount = (id) => {
+    setCounters(counters.map(c =>
+      c.id === id ? {...c, value: c.value + 1} : c
+    ));
+  }
+
   return (
     <>
       <h1>계수기</h1>
